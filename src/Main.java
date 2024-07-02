@@ -1,4 +1,6 @@
 import connect.ConnectFourConsoleController;
+import connect.ConnectFourConsoleView;
+import connect.ConnectFourModelImpl;
 import connect.ConnectFourView;
 import java.io.InputStreamReader;
 
@@ -14,7 +16,7 @@ public class Main {
   public static void main(String[] args) {
     Readable input = new InputStreamReader(System.in);
     Appendable output = System.out;
-    ConnectFourView view = new ConnectFourView(output);
+    ConnectFourView view = new ConnectFourConsoleView(output);
     new ConnectFourConsoleController(input, view).playGame(new ConnectFourModelImpl(6, 7));
   }
 }
